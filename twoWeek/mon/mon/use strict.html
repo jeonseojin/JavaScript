@@ -1,0 +1,33 @@
+<html>
+    <body>
+      <!-- Use strict;
+        - Javascript 언어 특성상 굉장히 유연한 언어로 유연하다는 것은 다른 의미로 위험할 수 있다.
+          예를 들어 변수를 선언하지 않고도 변수에 값을 할당하거나 출력 등을 할 수 있다. 개발자 입장에서 이러한 비상식적으로 
+          유연한 상황을 좀 더 문법적으로 엄격하게 다룰 수 있게 script파일 맨 윗 상단부에 'use stript를 사용하여 방지
+
+        - Strict Mode의 선언방식, ES5부터 적용되는 키워드로 안전한 코딩을 위한 하나의 가이드라인이다.
+        - Strict Mode : 코드에 더 나은 오류 검사를 적용하는 방법, 사용시 암시적으로 선언한 변수를 사용하거나 읽기 전용 속성에
+          값을 할당하거나 확장할 수 없는 개체에 속성을 추가할 수 없다.
+      -->
+    
+      <script>
+        //----------------------------전역 컨텍스트(함수 범위 밖)에서 선언되는 경우 프로그램의 모든 코드에 strict 모드가 적용
+        "use strict";
+          function testFunction(){
+            var testvar = 4;
+            return testvar;
+          }
+         testvar = 5;
+        /*
+          -----------------------------함수 내에서 선언되는 경우 함수의 해당 코드에 strict모드가 적용
+          function testFunction(){
+            "use strict";
+            var testvar = 4;
+            return testvar;
+          }
+          testvar = 5;
+
+        */
+      </script>
+    </body>
+</html>
