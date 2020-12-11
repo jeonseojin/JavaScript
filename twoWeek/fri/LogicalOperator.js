@@ -4,16 +4,21 @@ alert( null || 2 || undefined ); // -> 2
 // 과제 2) OR 연산자의 피연산자가 alert면 결과 예측
 alert( alert(1) || 2 || alert(3) );
 /* -> 1 / 2  : 연산이 두 번 이루어지는 경우
-    alert(1)을 boolean 값으로 변환하는 과정에서 1이 발생하고
-    두 번째 연산 2 || alert(3)
-
+    참고 내용
+        - 가장 왼쪽 피연산자부터 시작해 오른쪽으로 나아가며 피연산자를 평가
+        - 각 피연산자를 불린형으로 변환(alert(1) -> 1 ), 변환 후 그 값이 true이면 연산을 멈추고 해당 피연산자의 변환 전 원래 값을 반환
+    (alert(1)은 알림창으로 1이 뜨지만 값을 반환하지 않기 때문)undefined || 2 -> true로 2 반환
 */
 
 // 과제 3) AND 연산의 결과 예측
 alert( 1 && null && 2 ); // -> null
 
 // 과제 4) AND 연산자의 피연산자가 alert인 결과 예측
-alert( alert(1) && alert(2) && alert(3)); // -> 1 / undefined
+alert( alert(1) && alert(2) && alert(3));
+/* -> 1 / undefined
+    alert(1)을 통해서 알림창 1이 뜨고 변환 후 반환되는 값이 없기 때문에 undefiend가 되면서 false로 평가가 멈춰
+    알림창 1과 결과인 undefined가 뜨게 된다.
+*/
 
 // 과제 5) OR AND OR 연산자로 구셩된 표현식 결과 예측
 alert( null || 2 && 3 || 4); // 2 && 3 < &&이 ||보다 우선순위이고 AND 연산자는 뒤에 오는 값을 반환하기에 3
