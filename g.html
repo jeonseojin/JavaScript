@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <script>
+            // 자연수 2, 3, 5, 7 이 출력되는 반복문 
+            let a =[];
+            for(let i =1; i<=10; i++){
+                let t = true;
+                for(let j = 2; j < i;j++){
+                    if(i % j ===0 ){
+                        t = false;
+                    }
+                }
+                if (t){
+                    a.push(i);
+                }
+                console.log(a);
+            }
+            //↑ 먼소린지 잘 모르겠음
+            
+            for(let n=2; n<=10; n++){
+                let sum=0;
+                for(let i=1;i<=n;i++){
+                    if(n%i==0){
+                        sum++;
+                    }
+                }
+                if(sum == 2){
+                        alert(n);
+                }
+                sum=0;
+            }
+              
+
+        </script>
+    </body>
+</html>
