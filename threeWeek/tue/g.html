@@ -29,6 +29,20 @@
                 }
                 sum=0;
             }
+
+            /* 함수페이지에서 continue와 label을 활용하여 사용하는 방법 이해함*/
+            function showPrimes(n) {
+                nextPrime: for (let i = 2; i < n; i++) {
+
+                    for (let j = 2; j < i; j++) {
+                        if (i % j == 0) continue nextPrime;
+                    }
+
+                    alert( i ); // 소수
+                }
+            }
+            let n = prompt('숫자입력', '');
+            showPrimes(n);
               
 
         </script>
