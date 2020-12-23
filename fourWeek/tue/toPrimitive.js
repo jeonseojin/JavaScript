@@ -60,7 +60,7 @@
                 -> user 객체에 객체-원시형 변환 메서드 obj[Symbol.toPrimitive](hint)를 구현
     
     toString과 valueOf
-        - toString/valueOf는 심볼이 생기기 이전부터 존해 왔던 평범한 메서드(구식이지만 형 변환을 직접 구현할 수 있음)
+        - toString/valueOf는 심볼이 생기기 이전부터 존재해 왔던 평범한 메서드(구식이지만 형 변환을 직접 구현할 수 있음)
         - 객체에 Symbol.toPrimitive가 없으면 자바스크립트는 아래 규칙에 따라 toString이나 valueOf를 호출
             * hint가 string인 경우 : toString -> valueOf 순(toString이 있다면 toString을 호출, toString이 없다면 valueOf를 호출)
             * 그 외: valueOf -> toString 순
